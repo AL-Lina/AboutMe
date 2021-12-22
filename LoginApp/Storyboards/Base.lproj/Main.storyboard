@@ -151,6 +151,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="5Vp-Bu-f1U"/>
+                    <connections>
+                        <outlet property="WelcomeLabel" destination="2MC-P1-BGj" id="PFt-eR-up5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgR-Iw-h6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="CPX-Kf-IVu" userLabel="Exit" sceneMemberID="exit"/>
@@ -288,6 +291,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iI5-Ya-Tsa"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="Ve8-Z9-SPZ" id="4ho-qd-TYU"/>
+                        <outlet property="citizenshipLabel" destination="D9m-fV-rBf" id="rrX-mi-Iam"/>
+                        <outlet property="dateOfBirthLabel" destination="3oP-75-hEY" id="SZh-ft-8fN"/>
+                        <outlet property="nameLabel" destination="GvR-XP-1Rt" id="ueL-iE-7wX"/>
+                        <outlet property="surnameLabel" destination="Lfz-Qc-Kcj" id="RpW-Dy-goy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpf-3D-HbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,6 +336,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a2C-Nu-Oih"/>
+                    <connections>
+                        <outlet property="aboutMyselfLabel" destination="URd-bX-4U7" id="a5i-fi-nJM"/>
+                        <outlet property="image" destination="1pw-dV-ga3" id="gLo-4X-N4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9f-wc-Kcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
