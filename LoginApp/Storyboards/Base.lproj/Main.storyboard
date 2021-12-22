@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,9 @@
                                         <state key="normal" title="Forgot User name?">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotUserNameTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="UlI-Fg-dXF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOM-Ky-hNR">
                                         <rect key="frame" x="251" y="0.0" width="123" height="30"/>
@@ -47,6 +50,9 @@
                                         <state key="normal" title="Forgot Password?">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="4nI-48-WSs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -68,6 +74,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="logInTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="NqN-YX-7ue"/>
                                     <segue destination="st7-0b-zVU" kind="presentation" id="Ifd-gh-0Vx"/>
                                 </connections>
                             </button>
@@ -85,6 +92,10 @@
                             <constraint firstItem="nXd-eF-0Q2" firstAttribute="top" secondItem="PbZ-ju-jEb" secondAttribute="bottom" constant="17" id="oas-IU-ckF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginValueTF" destination="EOB-tP-eBs" id="TaR-xL-RHA"/>
+                        <outlet property="passwordValueTF" destination="PbZ-ju-jEb" id="778-eC-OiL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +104,7 @@
         <!--Home-->
         <scene sceneID="FEP-Mj-93H">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="QTT-AX-BUh" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QTT-AX-BUh" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1D-Zb-tCU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,6 +136,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="CPX-Kf-IVu" kind="unwind" unwindAction="unwindFor:" id="Av1-Ns-2yh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O0G-s1-we0"/>
@@ -139,13 +153,14 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="5Vp-Bu-f1U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgR-Iw-h6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CPX-Kf-IVu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="301" y="827"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="iIQ-FA-i7Z">
             <objects>
-                <viewController id="7nP-5w-Ycl" sceneMemberID="viewController">
+                <viewController id="7nP-5w-Ycl" customClass="UserViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wz6-Cb-4JL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="1989.5999999999999" y="826.23688155922048"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="mUP-jC-q4Q">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Qd5-91-kyS" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qd5-91-kyS" customClass="ImageViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D0v-Y4-NpP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,6 +337,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="st7-0b-zVU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="keT-tU-8qc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
